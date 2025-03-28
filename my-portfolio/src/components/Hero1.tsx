@@ -1,5 +1,6 @@
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
+import { cn } from "../../utils/cn";
 
 const Hero1 = () => {
   return (
@@ -16,6 +17,16 @@ const Hero1 = () => {
         <Spotlight
           className="left-80 top-28 h-[80vh] w-[50vw]"
           fill="#0000FF"
+        />
+      </div>
+      <div className="relative flex h-screen w-full items-center justify-center bg-black dark:bg-black">
+        <div
+          className={cn(
+            "absolute inset-0",
+            "[background-size:40px_40px]",
+            "[background-image:linear-gradient(to_right,#000000_1px,transparent_1px),linear-gradient(to_bottom,#000000_1px,transparent_1px)]",
+            "dark:[background-image:linear-gradient(to_right,#000000_1px,transparent_1px),linear-gradient(to_bottom,#000000_1px,transparent_1px)]"
+          )}
         />
       </div>
     </div>
