@@ -1,4 +1,5 @@
 import { cn } from "../../../utils/cn";
+import { BackgroundGradientAnimation } from "./GradientBg";
 
 export const BentoGrid = ({
   className,
@@ -43,7 +44,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 p-4",
+        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 p-4 ",
         className
       )}
       style={{
@@ -63,9 +64,23 @@ export const BentoGridItem = ({
           )}
         </div>
       </div>
+      <div className="absolute right-0 -bottom-5">
+        {spareImg && (
+          <img
+            src={spareImg}
+            alt={spareImg}
+            className="object-cover object-center w-full h-full"
+          />
+        )}
+      </div>
+      {id === 6 && (
+        <BackgroundGradientAnimation>
+          <div className="rounded-2xl absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
+        </BackgroundGradientAnimation>
+      )}
 
       <div className="transition duration-200 group-hover/bento:translate-x-2">
-        <div className="mt-2 mb-2 font-sans font-bold text-white dark:text-neutral-200">
+        <div className=" mt-2 mb-2 font-sans font-bold text-white dark:text-neutral-200">
           {title}
         </div>
         <div className="font-sans text-xs font-normal text-white dark:text-neutral-300">
