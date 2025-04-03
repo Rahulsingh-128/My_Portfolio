@@ -9,6 +9,7 @@ export default function Home() {
   return (
     <main className="relative bg-black-100 flex flex-col justify-center item-center overflow-hidden mx-auto sm:px-10 px-5">
       <div className="max-w-7xl w-full container mx-auto">
+        <h1>Welcome to My Portfolio</h1>;
         {/* <FloatingNav navItems={navItems} /> */}
         {/* <Hero1 /> */}
         {/* <Grid /> */}

@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "./provider";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { navItems } from "@/data";
+import { ClientWrapper } from "@/components/ClientWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,8 +42,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <FloatingNav navItems={navItems} />
-          {hero} {/* Hero Section */}
-          {grid} {/* Grid Section */}
+          <ClientWrapper hero={hero} grid={grid} />
           {children}
         </ThemeProvider>
       </body>
