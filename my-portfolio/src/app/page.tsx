@@ -11,7 +11,7 @@ export default function Home() {
       <div className="max-w-7xl w-full container mx-auto">
         {/* <FloatingNav navItems={navItems} /> */}
         <Hero1 />
-        <Grid />
+        {/* <Grid /> */}
       </div>
     </main>
   );
