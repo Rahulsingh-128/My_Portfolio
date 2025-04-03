@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export default function ProjectDetail({
   params,
@@ -7,6 +8,10 @@ export default function ProjectDetail({
 }) {
   const { projectId } = params;
   console.log(params.projectId);
+  if (parseInt(projectId) > 1000) {
+    notFound();
+    //redirect("/projects");
+  }
   return (
     <div className="min-h-[200vh] overflow-y-auto">
       <h2 className="mb-3">Project detail Page {projectId}</h2>
