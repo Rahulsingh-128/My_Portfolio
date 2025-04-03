@@ -22,8 +22,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  hero,
+  grid,
 }: Readonly<{
   children: React.ReactNode;
+  hero: React.ReactNode;
+  grid: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -37,6 +41,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <FloatingNav navItems={navItems} />
+          {hero} {/* Hero Section */}
+          {grid} {/* Grid Section */}
           {children}
         </ThemeProvider>
       </body>
