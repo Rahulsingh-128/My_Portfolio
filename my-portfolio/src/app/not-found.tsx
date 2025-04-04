@@ -7,8 +7,8 @@ export default function NotFoundPage() {
 
   useEffect(() => {
     setTimeout(() => {
-      router.push("/");
-    }, 3000); // Redirect after 3 seconds
+      window.location.href = "/";
+    }, 0); // Redirect after 3 seconds
   }, [router]);
 
   return (

@@ -6,7 +6,7 @@ export default function About() {
   const router = useRouter();
 
   return (
-    <div className="min-h-[200vh] overflow-y-auto p-5">
+    <div className="min-h-[200vh] p-5">
       <h2 className="text-white text-2xl">About Me Page</h2>
 
       {/* Navigation Button */}

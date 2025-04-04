@@ -13,7 +13,7 @@ export default function ProjectDetail({
     //redirect("/projects");
   }
   return (
-    <div className="min-h-[200vh] overflow-y-auto">
+    <div className="min-h-[200vh] ">
       <h2 className="mb-3">Project detail Page {projectId}</h2>
       <Link
         href={`/projects/${projectId}/reviews`}
