@@ -7,7 +7,6 @@ interface User {
   email: string;
 }
 
-// Fetch user data on the server
 async function getUsers(): Promise<User[]> {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
 
